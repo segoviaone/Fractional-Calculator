@@ -18,6 +18,8 @@
 		8EA5D9F817EB9CCC0066C70D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EA5D9F717EB9CCC0066C70D /* Default-568h@2x.png */; };
 		8EA5D9FB17EB9CCC0066C70D /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5D9FA17EB9CCC0066C70D /* CalculatorViewController.m */; };
 		8EA5D9FE17EB9CCC0066C70D /* CalculatorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA5D9FC17EB9CCC0066C70D /* CalculatorViewController.xib */; };
+		8EA5DA0617EBB1C20066C70D /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5DA0517EBB1C20066C70D /* Fraction.m */; };
+		8EA5DA0917EBB4B90066C70D /* calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA5DA0817EBB4B90066C70D /* calculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		8EA5D9F917EB9CCC0066C70D /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		8EA5D9FA17EB9CCC0066C70D /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
 		8EA5D9FD17EB9CCC0066C70D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CalculatorViewController.xib; sourceTree = "<group>"; };
+		8EA5DA0417EBB1C20066C70D /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		8EA5DA0517EBB1C20066C70D /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
+		8EA5DA0717EBB4B90066C70D /* calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calculator.h; sourceTree = "<group>"; };
+		8EA5DA0817EBB4B90066C70D /* calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +89,16 @@
 		8EA5D9E717EB9CCC0066C70D /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				8EA5DA0417EBB1C20066C70D /* Fraction.h */,
+				8EA5DA0517EBB1C20066C70D /* Fraction.m */,
 				8EA5D9F017EB9CCC0066C70D /* CalculatorAppDelegate.h */,
 				8EA5D9F117EB9CCC0066C70D /* CalculatorAppDelegate.m */,
 				8EA5D9F917EB9CCC0066C70D /* CalculatorViewController.h */,
 				8EA5D9FA17EB9CCC0066C70D /* CalculatorViewController.m */,
 				8EA5D9FC17EB9CCC0066C70D /* CalculatorViewController.xib */,
 				8EA5D9E817EB9CCC0066C70D /* Supporting Files */,
+				8EA5DA0717EBB4B90066C70D /* calculator.h */,
+				8EA5DA0817EBB4B90066C70D /* calculator.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -136,6 +146,11 @@
 				CLASSPREFIX = Calculator;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Absolutely Learning";
+				TargetAttributes = {
+					8EA5D9DD17EB9CCC0066C70D = {
+						DevelopmentTeam = FK72VD8TPW;
+					};
+				};
 			};
 			buildConfigurationList = 8EA5D9D917EB9CCC0066C70D /* Build configuration list for PBXProject "Calculator" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -177,6 +192,8 @@
 				8EA5D9EE17EB9CCC0066C70D /* main.m in Sources */,
 				8EA5D9F217EB9CCC0066C70D /* CalculatorAppDelegate.m in Sources */,
 				8EA5D9FB17EB9CCC0066C70D /* CalculatorViewController.m in Sources */,
+				8EA5DA0617EBB1C20066C70D /* Fraction.m in Sources */,
+				8EA5DA0917EBB4B90066C70D /* calculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +278,15 @@
 		8EA5DA0217EB9CCC0066C70D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calculator/Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Calculator/Calculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -272,10 +294,15 @@
 		8EA5DA0317EB9CCC0066C70D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calculator/Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Calculator/Calculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -299,6 +326,7 @@
 				8EA5DA0317EB9CCC0066C70D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
